@@ -50,10 +50,10 @@ polyiamond counts. Matches Proposal 1 in `research/creative-review.md`.
 
 ## Expected performance characteristics
 
-- a(1..10) all solve in well under 1 second each on a cold run (the
-  archived use_shape buggy solver hit a(10) in 137 s; our new solver
-  does it with the framework's C-accelerated placement enumerator +
-  CaDiCaL in what should be comparable or faster time).
+- a(1..9) all solve in well under 1 second each on a cold run (the
+  archived use_shape buggy solver was orders of magnitude slower; our
+  new solver does it with the framework's C-accelerated placement
+  enumerator + CaDiCaL in what should be comparable or faster time).
 - Benchmark set (under `BENCHMARK_TIMEOUT_S=120s` per term) is
   expected to reach n >= 10, possibly n = 15 or higher. The
   `BENCHMARK_MAX_N=20` hard cap will likely fire before any term

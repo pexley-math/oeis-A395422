@@ -85,15 +85,6 @@
       "elapsed": 669.6504051685333,
       "sat_k": 31,
       "unsat_k": 30
-    },
-    {
-      "n": 10,
-      "ok": true,
-      "status": "PASS",
-      "detail": "n=10: Glucose confirms a(10)=39 (SAT at k=39, UNSAT at k=38)",
-      "elapsed": 107.14557981491089,
-      "sat_k": 39,
-      "unsat_k": 38
     }
   ]
 }

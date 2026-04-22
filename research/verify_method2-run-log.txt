@@ -2,9 +2,17 @@ verify_method2 run log
 ============================================================
 Method: Glucose42 + spanning arborescence + seqcounter (triangular)
 Timestamp: 2026-04-11T20:02:32
-Per-term timeout: 7200.0 s
+Per-term timeout: 3600.0 s
 Overall: PASS
 
-  [PASS] n=10: Glucose confirms a(10)=39 (SAT at k=39, UNSAT at k=38)  [107.1s]
+  [PASS] n=1: trivial (reported 1)  [0.0s]
+  [PASS] n=2: Glucose confirms a(2)=4 (SAT at k=4, UNSAT at k=3)  [0.0s]
+  [PASS] n=3: Glucose confirms a(3)=6 (SAT at k=6, UNSAT at k=5)  [0.0s]
+  [PASS] n=4: Glucose confirms a(4)=9 (SAT at k=9, UNSAT at k=8)  [0.0s]
+  [PASS] n=5: Glucose confirms a(5)=12 (SAT at k=12, UNSAT at k=11)  [0.1s]
+  [PASS] n=6: Glucose confirms a(6)=17 (SAT at k=17, UNSAT at k=16)  [0.7s]
+  [PASS] n=7: Glucose confirms a(7)=22 (SAT at k=22, UNSAT at k=21)  [8.4s]
+  [PASS] n=8: Glucose confirms a(8)=27 (SAT at k=27, UNSAT at k=26)  [103.3s]
+  [PASS] n=9: Glucose confirms a(9)=31 (SAT at k=31, UNSAT at k=30)  [669.7s]
 
-NO pre-primed values. All values derived from scratch by independent Glucose SAT re-derivation.
+NO pre-primed values. All values derived from scratch by independent re-derivation.

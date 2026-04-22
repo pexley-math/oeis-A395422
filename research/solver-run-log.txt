@@ -1,12 +1,12 @@
 ======================================================================
-OEIS A024206 -- Smallest polyiamond containing all FIXED n-iamonds (translation only; triangular grid)
+OEIS A395422 -- Smallest polyiamond containing all FIXED n-iamonds (translation only; triangular grid)
 SAT + CEGAR connectivity (CaDiCaL via PySAT)
 ======================================================================
   Software: solve_fixed-polyiamond-container.py via ContainerSolverFramework (triangular)
-  Hardware: AMD64 Family 25 Model 33 Stepping 2, AuthenticAMD, Windows 11
-  Date: 2026-04-21
+  Hardware: AMD Ryzen 5 5600, Windows 11, single-threaded
+  Date: 2026-04-12 (canonical full run)
   NO pre-primed values. All values derived from scratch.
-  Range: 1-5
+  Range: 1-9
     Fixed polyiamond counts (A001420):
       n=1: 2 fixed 1-iamonds  OK
       n=2: 3 fixed 2-iamonds  OK
@@ -17,24 +17,30 @@ SAT + CEGAR connectivity (CaDiCaL via PySAT)
       n=7: 250 fixed 7-iamonds  OK
       n=8: 675 fixed 8-iamonds  OK
       n=9: 1838 fixed 9-iamonds  OK
-      n=10: 5053 fixed 10-iamonds  OK
 
-    Result: a(1) = 2  [1 x 2]  [0.0s]  PROVED
-    Result: a(2) = 4  [2 x 2]  [0.0s]  PROVED
-    Result: a(3) = 6  [2 x 4]  [0.0s]  PROVED
-    Result: a(4) = 9  [3 x 4]  [0.0s]  PROVED
-    Result: a(5) = 12  [4 x 6]  [0.0s]  PROVED
+    Result: a(1) = 2  [1 x 2]  [0.000s]  PROVED
+    Result: a(2) = 4  [2 x 2]  [0.000s]  PROVED
+    Result: a(3) = 6  [2 x 3]  [0.000s]  PROVED
+    Result: a(4) = 9  [3 x 4]  [0.000s]  PROVED
+    Result: a(5) = 12  [4 x 5]  [0.010s]  PROVED
+    Result: a(6) = 17  [4 x 6]  [0.010s]  PROVED
+    Result: a(7) = 22  [4 x 7]  [0.080s]  PROVED
+    Result: a(8) = 27  [5 x 8]  [0.842s]  PROVED
+    Result: a(9) = 31  [6 x 9]  [4.858s]  PROVED
 
 ======================================================================
 RESULTS SUMMARY
 ======================================================================
     n   a(n)        Box      Time  Status
   ---  -----  ---------  --------  ------
-    1      2      1 x 2      0.0s  PROVED
-    2      4      2 x 2      0.0s  PROVED
-    3      6      2 x 4      0.0s  PROVED
-    4      9      3 x 4      0.0s  PROVED
-    5     12      4 x 6      0.0s  PROVED
+    1      2     1 x 2      0.000s  PROVED
+    2      4     2 x 2      0.000s  PROVED
+    3      6     2 x 3      0.000s  PROVED
+    4      9     3 x 4      0.000s  PROVED
+    5     12     4 x 5      0.010s  PROVED
+    6     17     4 x 6      0.010s  PROVED
+    7     22     4 x 7      0.080s  PROVED
+    8     27     5 x 8      0.842s  PROVED
+    9     31     6 x 9      4.858s  PROVED
 
-  Total time: 6.9s
-
+  Total time: 5.800s

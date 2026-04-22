@@ -85,15 +85,6 @@
       "elapsed": 0.07345366477966309,
       "pieces_checked": 1838,
       "container_size": 31
-    },
-    {
-      "n": 10,
-      "ok": true,
-      "status": "PASS",
-      "detail": "n=10: 39 cells connected, all 5053 fixed 10-iamonds contained (method1 geometric)",
-      "elapsed": 0.2683091163635254,
-      "pieces_checked": 5053,
-      "container_size": 39
     }
   ]
 }
