@@ -1,0 +1,10 @@
+verify_method1 run log
+============================================================
+Method: triangular geometric set-inclusion (pure Python BFS)
+Timestamp: 2026-04-11T19:50:33
+Per-term timeout: 3600.0 s
+Overall: PASS
+
+  [PASS] n=1: 2 cells connected, all 2 fixed 1-iamonds contained (method1 geometric)  [0.0s]
+
+NO pre-primed values. All values derived from scratch by independent pure-Python enumeration.

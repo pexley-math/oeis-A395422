@@ -1,0 +1,40 @@
+======================================================================
+OEIS A024206 -- Smallest polyiamond containing all FIXED n-iamonds (translation only; triangular grid)
+SAT + CEGAR connectivity (CaDiCaL via PySAT)
+======================================================================
+  Software: solve_fixed-polyiamond-container.py via ContainerSolverFramework (triangular)
+  Hardware: AMD64 Family 25 Model 33 Stepping 2, AuthenticAMD, Windows 11
+  Date: 2026-04-21
+  NO pre-primed values. All values derived from scratch.
+  Range: 1-5
+    Fixed polyiamond counts (A001420):
+      n=1: 2 fixed 1-iamonds  OK
+      n=2: 3 fixed 2-iamonds  OK
+      n=3: 6 fixed 3-iamonds  OK
+      n=4: 14 fixed 4-iamonds  OK
+      n=5: 36 fixed 5-iamonds  OK
+      n=6: 94 fixed 6-iamonds  OK
+      n=7: 250 fixed 7-iamonds  OK
+      n=8: 675 fixed 8-iamonds  OK
+      n=9: 1838 fixed 9-iamonds  OK
+      n=10: 5053 fixed 10-iamonds  OK
+
+    Result: a(1) = 2  [1 x 2]  [0.0s]  PROVED
+    Result: a(2) = 4  [2 x 2]  [0.0s]  PROVED
+    Result: a(3) = 6  [2 x 4]  [0.0s]  PROVED
+    Result: a(4) = 9  [3 x 4]  [0.0s]  PROVED
+    Result: a(5) = 12  [4 x 6]  [0.0s]  PROVED
+
+======================================================================
+RESULTS SUMMARY
+======================================================================
+    n   a(n)        Box      Time  Status
+  ---  -----  ---------  --------  ------
+    1      2      1 x 2      0.0s  PROVED
+    2      4      2 x 2      0.0s  PROVED
+    3      6      2 x 4      0.0s  PROVED
+    4      9      3 x 4      0.0s  PROVED
+    5     12      4 x 6      0.0s  PROVED
+
+  Total time: 6.9s
+

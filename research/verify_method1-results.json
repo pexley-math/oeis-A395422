@@ -1,0 +1,99 @@
+{
+  "verifier": "verify_method1",
+  "method": "geometric set-inclusion on triangular lattice (pure Python BFS, parity-preserving translations, disjoint enumeration)",
+  "timestamp": "2026-04-11T19:50:33",
+  "per_term_timeout_s": 3600.0,
+  "overall_status": "PASS",
+  "results": [
+    {
+      "n": 1,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=1: 2 cells connected, all 2 fixed 1-iamonds contained (method1 geometric)",
+      "elapsed": 0.0,
+      "pieces_checked": 2,
+      "container_size": 2
+    },
+    {
+      "n": 2,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=2: 4 cells connected, all 3 fixed 2-iamonds contained (method1 geometric)",
+      "elapsed": 0.0,
+      "pieces_checked": 3,
+      "container_size": 4
+    },
+    {
+      "n": 3,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=3: 6 cells connected, all 6 fixed 3-iamonds contained (method1 geometric)",
+      "elapsed": 0.0,
+      "pieces_checked": 6,
+      "container_size": 6
+    },
+    {
+      "n": 4,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=4: 9 cells connected, all 14 fixed 4-iamonds contained (method1 geometric)",
+      "elapsed": 0.001767873764038086,
+      "pieces_checked": 14,
+      "container_size": 9
+    },
+    {
+      "n": 5,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=5: 12 cells connected, all 36 fixed 5-iamonds contained (method1 geometric)",
+      "elapsed": 0.0,
+      "pieces_checked": 36,
+      "container_size": 12
+    },
+    {
+      "n": 6,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=6: 17 cells connected, all 94 fixed 6-iamonds contained (method1 geometric)",
+      "elapsed": 0.003004312515258789,
+      "pieces_checked": 94,
+      "container_size": 17
+    },
+    {
+      "n": 7,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=7: 22 cells connected, all 250 fixed 7-iamonds contained (method1 geometric)",
+      "elapsed": 0.006686687469482422,
+      "pieces_checked": 250,
+      "container_size": 22
+    },
+    {
+      "n": 8,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=8: 27 cells connected, all 675 fixed 8-iamonds contained (method1 geometric)",
+      "elapsed": 0.02490830421447754,
+      "pieces_checked": 675,
+      "container_size": 27
+    },
+    {
+      "n": 9,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=9: 31 cells connected, all 1838 fixed 9-iamonds contained (method1 geometric)",
+      "elapsed": 0.07345366477966309,
+      "pieces_checked": 1838,
+      "container_size": 31
+    },
+    {
+      "n": 10,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=10: 39 cells connected, all 5053 fixed 10-iamonds contained (method1 geometric)",
+      "elapsed": 0.2683091163635254,
+      "pieces_checked": 5053,
+      "container_size": 39
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "framework": "_TriContainerFramework",
+  "n": 2,
+  "k": 3,
+  "cnf_path": "research\\drat\\n2_k3.cnf",
+  "cnf_sha256": "c6c911be4e5cbfe915ac2297c0860c3c1b6d0c59a33d03de8c917975c9c8c57b",
+  "drat_path": "research\\drat\\n2_k3.drat",
+  "drat_sha256": "50ae01b0546274adcfc06acd093b01f2f1e3e7584cd6c9538b8b074b683f6c08",
+  "drat_bytes": 122,
+  "drat_lines": null,
+  "solver_name": "cadical153",
+  "solve_wall_seconds": 0.16266759997233748,
+  "verifier": "drat-trim",
+  "verified": true,
+  "witness_path": "research\\drat\\n2_witness.json",
+  "cegar_iterations": 1,
+  "cegar_cuts_added": 0,
+  "emit_exit_code": 20,
+  "emit_runtime_seconds": 0.027925000002142042,
+  "drat_trim_output_tail": "parsing input formula with 15 variables and 29 clauses\n\nc finished parsing\n\nc UNSAT via unit propagation on the input instance\n\nc 7 of 29 clauses in core                            \n\nc 1 of 8 lemmas in core using 7 resolution steps\n\nc 0 RAT lemmas in core; 0 redundant literals in core lemmas\n\nc optimized proofs are not supported for forward checking\n\ns VERIFIED\n\nc verification time: 0.095 seconds\n"
+}

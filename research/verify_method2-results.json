@@ -1,0 +1,99 @@
+{
+  "verifier": "verify_method2",
+  "method": "Glucose42 with rooted spanning-arborescence connectivity and sequential-counter cardinality on the triangular lattice (parity-preserving placements); disjoint from the main solver's CaDiCaL + CEGAR + placement_runner.",
+  "timestamp": "2026-04-11T20:02:32",
+  "per_term_timeout_s": 3600.0,
+  "overall_status": "PASS",
+  "results": [
+    {
+      "n": 1,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=1: trivial (reported 1)",
+      "elapsed": 0.0,
+      "sat_k": 1,
+      "unsat_k": 0
+    },
+    {
+      "n": 2,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=2: Glucose confirms a(2)=4 (SAT at k=4, UNSAT at k=3)",
+      "elapsed": 0.003000020980834961,
+      "sat_k": 4,
+      "unsat_k": 3
+    },
+    {
+      "n": 3,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=3: Glucose confirms a(3)=6 (SAT at k=6, UNSAT at k=5)",
+      "elapsed": 0.003999948501586914,
+      "sat_k": 6,
+      "unsat_k": 5
+    },
+    {
+      "n": 4,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=4: Glucose confirms a(4)=9 (SAT at k=9, UNSAT at k=8)",
+      "elapsed": 0.017545461654663086,
+      "sat_k": 9,
+      "unsat_k": 8
+    },
+    {
+      "n": 5,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=5: Glucose confirms a(5)=12 (SAT at k=12, UNSAT at k=11)",
+      "elapsed": 0.0843961238861084,
+      "sat_k": 12,
+      "unsat_k": 11
+    },
+    {
+      "n": 6,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=6: Glucose confirms a(6)=17 (SAT at k=17, UNSAT at k=16)",
+      "elapsed": 0.6536242961883545,
+      "sat_k": 17,
+      "unsat_k": 16
+    },
+    {
+      "n": 7,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=7: Glucose confirms a(7)=22 (SAT at k=22, UNSAT at k=21)",
+      "elapsed": 8.435877323150635,
+      "sat_k": 22,
+      "unsat_k": 21
+    },
+    {
+      "n": 8,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=8: Glucose confirms a(8)=27 (SAT at k=27, UNSAT at k=26)",
+      "elapsed": 103.34927725791931,
+      "sat_k": 27,
+      "unsat_k": 26
+    },
+    {
+      "n": 9,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=9: Glucose confirms a(9)=31 (SAT at k=31, UNSAT at k=30)",
+      "elapsed": 669.6504051685333,
+      "sat_k": 31,
+      "unsat_k": 30
+    },
+    {
+      "n": 10,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=10: Glucose confirms a(10)=39 (SAT at k=39, UNSAT at k=38)",
+      "elapsed": 107.14557981491089,
+      "sat_k": 39,
+      "unsat_k": 38
+    }
+  ]
+}
