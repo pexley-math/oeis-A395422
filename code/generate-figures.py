@@ -94,13 +94,23 @@ def generate_publication_figures(results):
 
 
 def generate_understanding_figure(results):
-    """Standalone explanatory diagram keyed to a_"box"(10) = 39.
+    """Standalone explanatory diagram keyed to the largest proved n.
 
-    Shows the optimal 39-cell container for n = 10, annotated with plain
+    Shows the optimal a(n)-cell container for that n, annotated with plain
     text explaining what the value means and how it differs from the
-    hex-grid analogue (A000217).
+    hex-grid analogue (A000217). The target n is picked from whatever is
+    present in solver-results.json -- no hard-coding.
     """
-    n = 10
+    ns_available = sorted(int(k) for k in results)
+    if not ns_available:
+        print("No results to draw understanding figure from; skipping.")
+        return
+    n = ns_available[-1]
+    n_max = n
+    seq_values = [results[str(k)]["value"] for k in ns_available]
+    seq_str = ", ".join(str(v) for v in seq_values)
+    a001420_vals = {1: 2, 2: 3, 3: 6, 4: 14, 5: 36, 6: 94, 7: 250, 8: 675, 9: 1838, 10: 5053}
+    a001420_str = ", ".join(str(a001420_vals[k]) for k in ns_available if k in a001420_vals)
     entry = results[str(n)]
     a_n = entry["value"]
     container = [tuple(c) for c in entry["cells"]]
@@ -145,12 +155,12 @@ def generate_understanding_figure(results):
                  f'swaps orientations, so the up- and down-pointing '
                  f'monotriangles count as two distinct fixed 1-iamonds '
                  f'(matching OEIS A001420(1) = 2) -- and the count of '
-                 f'fixed $n$-iamonds is $2, 3, 6, 14, 36, 94, 250, 675, '
-                 f'1838, 5053$ for $n = 1$ through $10$.')
+                 f'fixed $n$-iamonds is ${a001420_str}$ for '
+                 f'$n = 1$ through ${n_max}$.')
     parts.append(']')
     parts.append('#v(0.5em)')
     parts.append('#text(size: 10pt)[')
-    parts.append(f'*How it was proved.* For each $n = 1, ..., 10$, '
+    parts.append(f'*How it was proved.* For each $n = 1, ..., {n_max}$, '
                  f'a SAT solver with CEGAR connectivity search descended '
                  f'$k -> k - 1$ within the $n times n$ rectangle '
                  f'until it produced a model of size $a_"box"(n)$ and an '
@@ -159,7 +169,7 @@ def generate_understanding_figure(results):
                  f'with disjoint code paths from the main solver: a '
                  f'pure-Python geometric containment verifier and a '
                  f'Glucose-based spanning-arborescence re-optimiser. '
-                 f'All three stacks agree on $n = 1..10$.')
+                 f'All three stacks agree on $n = 1..{n_max}$.')
     parts.append(']')
     parts.append('#v(0.5em)')
     parts.append('#text(size: 10pt)[')
@@ -171,7 +181,7 @@ def generate_understanding_figure(results):
                  f'minimum container fits inside such a rectangle for '
                  f'every $n$; under (S), $a_"box"(n) = a(n)$ for all '
                  f'$n >= 1$. Every computed optimal container in '
-                 f'$n = 1..10$ is consistent with (S), but a general '
+                 f'$n = 1..{n_max}$ is consistent with (S), but a general '
                  f'proof is open.')
     parts.append(']')
     parts.append('#v(0.5em)')
@@ -181,8 +191,8 @@ def generate_understanding_figure(results):
                  f'fixed-polyhex container sequence coincides with the '
                  f'triangular numbers $T_n = n(n + 1)/2$ through $n = 7$, '
                  f'giving a clean closed form. On the triangular lattice '
-                 f'no such coincidence holds: $a_"box"(1..10) = 2, 4, 6, 9, '
-                 f'12, 17, 22, 27, 31, 39$ does not match any simple '
+                 f'no such coincidence holds: $a_"box"(1..{n_max}) = {seq_str}$ '
+                 f'does not match any simple '
                  f'closed form, linear recurrence, or known OEIS '
                  f'sequence -- including A024206, which was tentatively '
                  f'conjectured in a prior pass and is falsified '
