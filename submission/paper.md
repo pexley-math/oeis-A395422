@@ -275,8 +275,8 @@ done
 - `research/solver-results.json` -- proved a(n), optimal container cells, main solver timings.
 - `research/verify_method1-results.json` -- verifier 1 PASS/FAIL per term.
 - `research/verify_method2-results.json` -- verifier 2 PASS/FAIL per term, with explicit SAT-at-k and UNSAT-at-(k - 1) records.
-- `/tmp/drat_n*/n*_witness.json`, `n*_k*.cnf`, `n*_k*.drat`, `n*_k*.sidecar.json` -- wider-window SAT witness, full CNF, DRAT proof, and sidecar with SHA-256 hashes and drat-trim verdict per n.
-- `research/drat/n*_k*.cnf`, `n*_k*.drat`, `n*_k*.sidecar.json` -- main-window CNF + DRAT + SHA-anchored sidecar (produced by `--emit-drat` on the main solver).
+- `research/drat-wider/n*_witness.json`, `n*_k*.cnf.gz`, `n*_k*.drat.gz`, `n*_k*.sidecar.json` -- wider-window SAT witness, gzipped CNF, gzipped DRAT proof, and sidecar with SHA-256 hashes (of the uncompressed files) and drat-trim verdict `s DERIVATION` per n in {1, ..., 9}. Summary of all 9 verdicts at `research/drat-wider-certification-summary.json`.
+- `research/drat/n*_k*.cnf`, `n*_k*.drat`, `n*_k*.sidecar.json` -- main-window CNF + DRAT + SHA-anchored sidecar (produced by `--emit-drat` on the main solver for n = 1..5, drat-trim verdict `s VERIFIED`, feeds the prose-trace pipeline). Summary at `research/drat-certification-summary.json`.
 - `research/proof-trace.md` -- human-readable prose trace (forced UP steps in container vocabulary) + encoding summary + MUC statistics.
 - `research/proof-trace.typ` -- Typst companion with implication-DAG figure.
 

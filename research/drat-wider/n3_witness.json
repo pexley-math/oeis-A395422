@@ -1,0 +1,34 @@
+{
+  "n": 3,
+  "a_n_claimed": 6,
+  "solve_value": 6,
+  "solve_status": "PROVED",
+  "solve_wall_seconds": 0.0,
+  "cells": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ]
+  ],
+  "bbox": "2 x 3"
+}

@@ -1,0 +1,18 @@
+{
+  "n": 1,
+  "a_n_claimed": 2,
+  "solve_value": 2,
+  "solve_status": "PROVED",
+  "solve_wall_seconds": 0.0,
+  "cells": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ]
+  ],
+  "bbox": "1 x 3"
+}

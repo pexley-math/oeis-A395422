@@ -63,8 +63,10 @@ python code/verify_method2.py 9 --per-term-timeout 7200
 | `research/solver-results.json` | Machine-readable results with witnesses and timings |
 | `research/solver-run-log.txt` | Solver run log |
 | `research/verify_method{1,2}-results.json` | Per-term verifier results |
-| `research/drat/` | CNF, DRAT, witness, and sidecar artefacts for each n |
-| `research/drat-certification-summary.json` | Per-n drat-trim verdicts |
+| `research/drat-wider/` | Wider-window CNF (.cnf.gz), DRAT (.drat.gz), witness, and sidecar artefacts for n = 1..9 (drat-trim verdict `s DERIVATION`) |
+| `research/drat-wider-certification-summary.json` | Per-n wider-window drat-trim verdicts and SHA-256 anchors |
+| `research/drat/` | Main-window CNF, DRAT, witness, and sidecar artefacts for n = 1..5 (feeds the prose-trace pipeline; drat-trim verdict `s VERIFIED`) |
+| `research/drat-certification-summary.json` | Per-n main-window drat-trim verdicts |
 | `research/proof-trace.md` | Prose trace + MUC statistics for n = 1..5 |
 | `submission/paper.pdf` | Research paper |
 | `submission/fixed-polyiamond-container-figures.pdf` | Publication figures |

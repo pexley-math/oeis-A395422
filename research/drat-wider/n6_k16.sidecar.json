@@ -1,0 +1,23 @@
+{
+  "framework": "_TriContainerFramework",
+  "n": 6,
+  "k": 16,
+  "cnf_path": "research/drat-wider/n6_k16.cnf.gz",
+  "cnf_sha256": "69c288a7de22b09074319fb1355d13ca6aa5dc59db1c5573c0dcd40c4fbccb4a",
+  "drat_path": "research/drat-wider/n6_k16.drat.gz",
+  "drat_sha256": "8c9f2f45d165f000f0d9586c2b6b4f85de6720af8e09984f4fe183415930177f",
+  "drat_bytes": 1364024,
+  "drat_lines": null,
+  "solver_name": "cadical153",
+  "solve_wall_seconds": 0.716511599952355,
+  "verifier": "drat-trim",
+  "verified": true,
+  "witness_path": "research/drat-wider/n6_witness.json",
+  "cegar_iterations": 1,
+  "cegar_cuts_added": 0,
+  "emit_exit_code": 20,
+  "emit_runtime_seconds": 0.2734346999786794,
+  "drat_trim_output_tail": "38 clauses in core                            \n\nc 5366 of 6347 lemmas in core using 226476 resolution steps\n\nc 0 RAT lemmas in core; 0 redundant literals in core lemmas\n\nc optimized proofs are not supported for forward checking\n\nc VERIFIED derivation: all lemmas preserve satisfiability\n\nc WARNING: no empty clause detected, this is not a refutation\n\ns DERIVATION\n\nc verification time: 0.238 seconds\n",
+  "compression": "gzip (cnf, drat)",
+  "drat_trim_verdict": "s DERIVATION"
+}
