@@ -38,6 +38,19 @@ def load_results():
     return json.loads(path.read_text())
 
 
+def compute_bbox(cells):
+    """Return 'R x C' bounding-box string computed from the raw cell list.
+
+    Prefer this over `entry["bbox"]` -- the stored field has been observed
+    to drift from the raw cell spans at odd-n values (different column
+    convention in the writer). Computing from cells directly keeps
+    captions honest and prevents silent regression.
+    """
+    rs = [r for r, _ in cells]
+    cs = [c for _, c in cells]
+    return f"{max(rs) - min(rs) + 1} x {max(cs) - min(cs) + 1}"
+
+
 def generate_publication_figures(results):
     ns = sorted(int(k) for k in results)
     seq_str = ", ".join(str(results[str(n)]["value"]) for n in ns)
@@ -58,7 +71,7 @@ def generate_publication_figures(results):
         entry = results[str(n)]
         a_n = entry["value"]
         cells = [tuple(c) for c in entry["cells"]]
-        bbox = entry.get("bbox", "?")
+        bbox = compute_bbox(cells)
         pieces = entry.get("num_pieces", "?")
         elapsed_raw = entry.get("elapsed", "?")
         if isinstance(elapsed_raw, (int, float)):
@@ -115,7 +128,7 @@ def generate_understanding_figure(results):
     a_n = entry["value"]
     container = [tuple(c) for c in entry["cells"]]
     num_pieces = entry.get("num_pieces", "?")
-    bbox = entry.get("bbox", "?")
+    bbox = compute_bbox(container)
 
     body, w_cm, h_cm = triangle_figure_typst(container, fill_color=CONTAINER_COLOR)
 
