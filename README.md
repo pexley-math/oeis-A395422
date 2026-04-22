@@ -74,6 +74,8 @@ python code/verify_method2.py 9 --per-term-timeout 7200
 
 This is a new sequence -- no prior OEIS entry exists for this problem. The square-grid free-piece analog is [A327094](https://oeis.org/A327094), submitted to OEIS by Peter Kagey (Sep 2019); the underlying Minimum Common Superform question for pentominoes was posed by T. R. Dawson in 1942 (*Fairy Chess Review* Vol. 5 No. 4). The triangular-grid free-piece analog is [A392363](https://oeis.org/A392363); the hexagonal-grid fixed-piece analog matches the triangular numbers [A000217](https://oeis.org/A000217) for n = 1..7. Methodologically this work follows the SAT-based computational-combinatorics tradition exemplified by Heule and Kullmann's Boolean Pythagorean triples proof (2016) and by the DRAT-proof infrastructure developed for SAT Competition instances.
 
+This work was inspired by the [OEIS](https://oeis.org/) and the community of contributors who maintain it.
+
 ## Hardware
 
 AMD Ryzen 5 5600 (6-core / 12-thread), 16 GB RAM, Windows 11, single-threaded.
