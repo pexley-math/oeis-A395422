@@ -38,7 +38,20 @@ SAT solver (CaDiCaL 1.5.3 via PySAT) with counterexample-guided abstraction refi
 
 ## Running the Solver
 
-**Requirements:** Python 3.12+, python-sat (PySAT with CaDiCaL 1.5.3 and Glucose 4.2). The wider-window and prose-trace pipelines additionally need drat-trim (MSVC build for Windows, standard `make` for Linux) and native cadical 3.0.0.
+> **Note.** The scripts in `code/` are not runnable as-is from this repository alone. They import from a private shared-library monorepo (`sat_utils`, `polyform_enum`, `figure_gen_utils`) that is not published here, and their `sys.path` insertions assume the monorepo layout. The code is shipped as a reference for the method and for diff-style audit against the proof artefacts in `research/`. The proof itself (SAT witnesses, drat-trim VERIFIED DRAT certificates for n = 1..9) is self-contained in `research/drat-wider/` and can be re-verified with any stock DRAT checker without running the solver.
+
+**Requirements (for reference only):** Python 3.12+, python-sat (PySAT with CaDiCaL 1.5.3 and Glucose 4.2), plus the private shared libraries above. The wider-window and prose-trace pipelines additionally need drat-trim (MSVC build for Windows, standard `make` for Linux) and native cadical 3.0.0.
+
+**Re-verifying the UNSAT proofs from this repo alone:**
+
+```bash
+# Example: re-check the n=9 lower bound (a(9)=31 proved by UNSAT at k=30)
+gunzip -k research/drat-wider/n9_k30.cnf.gz research/drat-wider/n9_k30.drat.gz
+drat-trim research/drat-wider/n9_k30.cnf research/drat-wider/n9_k30.drat
+# Expected: "s DERIVATION"
+```
+
+**Example solver commands (require the private monorepo):**
 
 ```bash
 # Main solver -- proves a(n) inside the n x n search rectangle
@@ -67,7 +80,6 @@ python code/verify_method2.py 9 --per-term-timeout 7200
 | `research/drat-wider-certification-summary.json` | Per-n wider-window drat-trim verdicts and SHA-256 anchors |
 | `research/proof-trace.md` | Prose trace + MUC statistics for n = 1..5 |
 | `submission/fixed-polyiamond-container-figures.pdf` | Publication figures |
-| `submission/oeis-draft.txt` | OEIS submission draft |
 
 ## Prior Art and Acknowledgments
 
