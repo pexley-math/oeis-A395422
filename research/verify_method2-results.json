@@ -1,7 +1,7 @@
 {
   "verifier": "verify_method2",
   "method": "Glucose42 with rooted spanning-arborescence connectivity and sequential-counter cardinality on the triangular lattice (parity-preserving placements); disjoint from the main solver's CaDiCaL + CEGAR + placement_runner.",
-  "timestamp": "2026-04-11T20:02:32",
+  "timestamp": "2026-04-22T10:56:16",
   "per_term_timeout_s": 3600.0,
   "overall_status": "PASS",
   "results": [
@@ -9,10 +9,10 @@
       "n": 1,
       "ok": true,
       "status": "PASS",
-      "detail": "n=1: trivial (reported 1)",
+      "detail": "n=1: trivial two-iamond case (reported 2, expected 2)",
       "elapsed": 0.0,
-      "sat_k": 1,
-      "unsat_k": 0
+      "sat_k": 2,
+      "unsat_k": 1
     },
     {
       "n": 2,
@@ -86,5 +86,6 @@
       "sat_k": 31,
       "unsat_k": 30
     }
-  ]
+  ],
+  "note": "n=1 re-verified 2026-04-22 after A001420(1)=2 correction; n=2..9 re-used from the 2026-04-11 run (identical SAT/UNSAT certificates, unaffected by the n=1 polyform_enum fix)."
 }

@@ -1,11 +1,12 @@
 verify_method2 run log
 ============================================================
 Method: Glucose42 + spanning arborescence + seqcounter (triangular)
-Timestamp: 2026-04-11T20:02:32
+Timestamp: 2026-04-22T10:56:16
 Per-term timeout: 3600.0 s
 Overall: PASS
+Note: n=1 re-verified 2026-04-22 after A001420(1)=2 correction; n=2..9 re-used from the 2026-04-11 run (identical SAT/UNSAT certificates, unaffected by the n=1 polyform_enum fix).
 
-  [PASS] n=1: trivial (reported 1)  [0.0s]
+  [PASS] n=1: trivial two-iamond case (reported 2, expected 2)  [0.0s]
   [PASS] n=2: Glucose confirms a(2)=4 (SAT at k=4, UNSAT at k=3)  [0.0s]
   [PASS] n=3: Glucose confirms a(3)=6 (SAT at k=6, UNSAT at k=5)  [0.0s]
   [PASS] n=4: Glucose confirms a(4)=9 (SAT at k=9, UNSAT at k=8)  [0.0s]
