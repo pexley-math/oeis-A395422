@@ -20,7 +20,7 @@ import sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..'))
 
 from figure_gen_utils.manim_grids import tri_vertices, make_tri, build_shape_colored
-from figure_gen_utils.manim_patterns import bottom_text
+from figure_gen_utils.manim_patterns import bottom_text, snake_walk_order
 
 
 # ---------------------------------------------------------------------------
@@ -138,7 +138,9 @@ class ContainerExplainer(Scene):
 
         pieces = _enumerate_fixed(n)
 
-        # Compute placements once so we can order by spatial flow.
+        # Compute placements once, then order via the shared snake-walk
+        # helper so the red highlight slides around the container rather
+        # than teleporting.
         placements = {}
         for p in pieces:
             pl = _find_placement(p, container_set)
@@ -146,31 +148,7 @@ class ContainerExplainer(Scene):
                 raise RuntimeError(
                     f"n={n} piece does not fit inside the solver witness")
             placements[p] = frozenset(pl)
-
-        def _cent(cells):
-            cs = list(cells)
-            return (sum(r for r, _ in cs) / len(cs),
-                    sum(c for _, c in cs) / len(cs))
-
-        # "Snake walk" ordering: start with the top-leftmost placement, then
-        # at each step pick the unvisited placement that shares the most
-        # cells with the current one (so the red highlight slides rather
-        # than teleports). Break ties by centroid distance.
-        remaining = list(pieces)
-        remaining.sort(key=lambda p: _cent(placements[p]))  # topmost first
-        ordered = [remaining.pop(0)]
-        while remaining:
-            cur = placements[ordered[-1]]
-            cur_c = _cent(cur)
-            def _score(p, cur=cur, cur_c=cur_c):
-                pl = placements[p]
-                overlap = len(pl & cur)
-                cp = _cent(pl)
-                cd = (cp[0] - cur_c[0]) ** 2 + (cp[1] - cur_c[1]) ** 2
-                return (-overlap, cd)
-            remaining.sort(key=_score)
-            ordered.append(remaining.pop(0))
-        pieces = ordered
+        pieces = snake_walk_order(pieces, lambda p: placements[p])
 
         s = SCALE_FOR_N.get(n, 0.7)
 

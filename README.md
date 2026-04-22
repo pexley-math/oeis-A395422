@@ -80,7 +80,6 @@ python code/verify_method2.py 9 --per-term-timeout 7200
 | `research/verify_method{1,2}-results.json` | Per-term verifier results |
 | `research/container_explainer.py` | Manim scene generating the animation above (uses shared `figure_gen_utils.manim_grids` primitives) |
 | `research/container-animation.gif` | A(1)..A(3) piece cycling + a(4)..a(9) shape slideshow (embedded above) |
-| `research/container-animation.mp4` | MP4 version of the animation |
 | `research/drat-wider/` | Wider-window CNF (.cnf.gz), DRAT (.drat.gz), witness, and sidecar artefacts for n = 1..9 (drat-trim verdict `s DERIVATION`) |
 | `research/drat-wider-certification-summary.json` | Per-n wider-window drat-trim verdicts and SHA-256 anchors |
 | `submission/fixed-polyiamond-container-figures.pdf` | Publication figures |
