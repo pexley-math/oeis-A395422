@@ -58,7 +58,7 @@
     "value": 6,
     "status": "PROVED",
     "elapsed": 0.0,
-    "bbox": "2 x 4",
+    "bbox": "2 x 3",
     "cells": [
       [
         0,
@@ -148,7 +148,7 @@
     "value": 12,
     "status": "PROVED",
     "elapsed": 0.01,
-    "bbox": "4 x 6",
+    "bbox": "4 x 5",
     "cells": [
       [
         0,
@@ -520,7 +520,7 @@
     "value": 31,
     "status": "PROVED",
     "elapsed": 4.858,
-    "bbox": "6 x 10",
+    "bbox": "6 x 9",
     "cells": [
       [
         0,
