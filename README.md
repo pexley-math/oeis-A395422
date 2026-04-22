@@ -2,6 +2,8 @@
 
 Solver code and data for [OEIS A395422](https://oeis.org/A395422).
 
+![Container animation](research/container-animation.gif)
+
 ## The Problem
 
 a(n) is the minimum number of triangular cells in a connected polyiamond C such that every fixed n-iamond P is a subset of C after some parity-preserving translation of the triangular lattice. A fixed n-iamond is a connected set of n unit triangles counted up to translation only; rotations and reflections yield distinct pieces, so the number of fixed n-iamonds is [A001420(n)](https://oeis.org/A001420) (2, 3, 6, 14, 36, 94, 250, 675, 1838 for n = 1..9 -- note A001420(1) = 2, since the triangular lattice has two distinct unit-triangle orientations). This is the triangular-grid fixed-piece analog of [A327094](https://oeis.org/A327094) (square grid, free pieces) and the triangular-grid counterpart of [A392363](https://oeis.org/A392363) (triangular grid, free pieces).
@@ -76,6 +78,9 @@ python code/verify_method2.py 9 --per-term-timeout 7200
 | `research/solver-results.json` | Machine-readable results with witnesses and timings |
 | `research/solver-run-log.txt` | Solver run log |
 | `research/verify_method{1,2}-results.json` | Per-term verifier results |
+| `research/container_explainer.py` | Manim scene generating the animation above (uses shared `figure_gen_utils.manim_grids` primitives) |
+| `research/container-animation.gif` | A(1)..A(3) piece cycling + a(4)..a(9) shape slideshow (embedded above) |
+| `research/container-animation.mp4` | MP4 version of the animation |
 | `research/drat-wider/` | Wider-window CNF (.cnf.gz), DRAT (.drat.gz), witness, and sidecar artefacts for n = 1..9 (drat-trim verdict `s DERIVATION`) |
 | `research/drat-wider-certification-summary.json` | Per-n wider-window drat-trim verdicts and SHA-256 anchors |
 | `submission/fixed-polyiamond-container-figures.pdf` | Publication figures |
