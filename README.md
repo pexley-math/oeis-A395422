@@ -90,8 +90,7 @@ This work is freely available. If you find it useful, a citation or acknowledgme
 
 - **A395422** (this sequence): https://oeis.org/A395422
 - **A001420** (fixed n-iamond count, solver input): https://oeis.org/A001420
-- **A000577** (free n-iamond count): https://oeis.org/A000577
-- **A006534** (one-sided n-iamond count): https://oeis.org/A006534
 - **A392363** (triangular grid, free pieces -- companion): https://oeis.org/A392363
 - **A327094** (square grid, free pieces): https://oeis.org/A327094
 - **A000217** (triangular numbers; hex-grid fixed-piece analog, proved for n = 1..7): https://oeis.org/A000217
+- **A024206** (previously conjectured match, falsified in this work): https://oeis.org/A024206
